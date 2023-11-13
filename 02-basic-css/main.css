@@ -32,11 +32,20 @@ body {
 }
 .main-header > div {
   display: inline-block;
+  vertical-align: middle;
 }
+.main-header__brand {
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 .main-nav {
+  vertical-align: middle;
   display: inline-block;
   text-align: right;
-  width: calc(100% - 54px);
+  width: calc(100% - 74px);
   /* 
     100%으로 주면 부모의 width가 적용되기 때문에 div의 width를 빼줘야한다. 
     하지만 빼줘도 되지 않는다. 이건 display:inline-block; 의 버그 같은건데 div와 nav태그 사이의 공백을 계산하기 때문이다. 
@@ -50,4 +59,18 @@ body {
 }
 .main-nav__item {
   display: inline-block;
+  margin: 0 16px;
+}
+
+.main-nav__item a {
+  color: #014112;
+  text-decoration: none;
+}
+
+.main-nav__item a:hover {
+  color: white;
+}
+
+.main-nav__item a:active {
+  color: white;
 }
