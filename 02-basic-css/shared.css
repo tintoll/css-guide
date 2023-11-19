@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+.main-header {
+  width: 100%;
+  background: #2ddf5c;
+  padding: 8px 16px;
+}
+.main-header > div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-header__brand {
+  color: black;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.main-nav {
+  vertical-align: middle;
+  display: inline-block;
+  text-align: right;
+  width: calc(100% - 74px);
+  /* 
+    100%으로 주면 부모의 width가 적용되기 때문에 div의 width를 빼줘야한다. 
+    하지만 빼줘도 되지 않는다. 이건 display:inline-block; 의 버그 같은건데 div와 nav태그 사이의 공백을 계산하기 때문이다. 
+    공백을 없애주면 해결되지만 깔끔한 방법은 아니다.
+  */
+}
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-nav__item {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-nav__item a {
+  color: #014112;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 3px 0;
+}
+
+/* .main-nav__item a::after {
+  content: "( Link)";
+  color: red;
+} */
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+.main-nav__item--cta a {
+  color: white;
+  background: red;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--ctaa:active {
+  color: red;
+  background: white;
+  border: none;
+}
+
+.main-footer {
+  background: black;
+  padding: 32px;
+  margin-top: 48px;
+}
+.main-footer__links {
+  list-style: none;
+  main: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-footer__link {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+.main-footer__link a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer__link a:hover,
+.main-footer__link a:active {
+  color: #ccc;
+}
+.button {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  background: white;
+  color: #0e4f1f;
+}
+
+.button:focust {
+  outline: none;
+}
